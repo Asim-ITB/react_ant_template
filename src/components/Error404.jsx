@@ -1,4 +1,4 @@
-import { Card } from "antd";
+import { Card, Typography } from "antd";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useMemo } from "react";
@@ -44,18 +44,17 @@ export default function Error404() {
           alignItems: "center",
           bottom: !isAdmin ? "100px" : "40px",
           justifyContent: "center",
-          backgroundColor: "#dfe1e5",
           border: "none",
         }}
       >
-        <h1>404 Page Not Found</h1>
+        <Typography.Title level={3}>404 Page Not Found</Typography.Title>
         <p>
           <Link to="/admin/dashboard">Back to homepage</Link>
         </p>
-        <p>
+        <Typography.Paragraph>
           Redirecting to the home page in
           <span style={{ color: "#1677ff" }}> {redirectTime}</span> seconds...
-        </p>
+        </Typography.Paragraph>
       </Card>
     </div>
   );

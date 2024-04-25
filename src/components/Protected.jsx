@@ -2,7 +2,7 @@
 // import { useQuery } from "@tanstack/react-query";
 import { Navigate } from "react-router-dom";
 // import { user } from "../Apis/TestApi";
-function PrivateRoute({ Component }) {
+function PrivateRoute({ children }) {
   const tokenString = localStorage.getItem("token");
   const isLoggedIn = !!tokenString;
   // const { data, error } = useQuery({
@@ -16,7 +16,7 @@ function PrivateRoute({ Component }) {
   //   console.log(error);
   // }
   const isAuthenticated = isLoggedIn;
-  return isAuthenticated ? Component : <Navigate to="/login" />;
+  return isAuthenticated ? children : <Navigate to="/login" />;
 }
 
 export default PrivateRoute;
