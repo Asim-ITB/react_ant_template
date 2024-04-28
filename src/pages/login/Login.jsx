@@ -62,10 +62,10 @@ function Login() {
             <Typography.Title level={2}>Login</Typography.Title>
             <br />
             <Form layout="vertical" onFinish={handleFormSubmit}>
-              <Form.Item rules={rules.email} label="Username" name="uname">
+              <Form.Item rules={rules.email} label="Emsil" name="email">
                 <Input
                   type="text"
-                  placeholder="Enter Username"
+                  placeholder="Enter email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -74,7 +74,7 @@ function Login() {
                 rules={rules.password}
                 label="Password"
                 placeholder="Enter Password"
-                name="psw"
+                name="passsword"
               >
                 <Input.Password
                   value={password}

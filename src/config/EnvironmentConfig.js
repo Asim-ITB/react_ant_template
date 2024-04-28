@@ -1,5 +1,5 @@
 const dev = {
-  API_ENDPOINT_URL: "http://localhost:5000/api",
+  API_ENDPOINT_URL: "http://localhost:8080",
   MEDIA_ENDPOINT_URL: "",
 };
 
